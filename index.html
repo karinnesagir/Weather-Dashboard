@@ -4,45 +4,78 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/style.css">
     <title>Weather Dashboard</title>
 </head>
 
 <body>
-    <header>
+    <header class="p-3 mb-4 bg-dark text-light d-flex justify-content-center">
         <h1>Weather Dashboard</h1>
     </header>
-    <section class="content">
-        <section class="city-place">
-            <h2>CityName (11/30/22)</h2>
-                <ul>
-                    <li>Temp:</li>
-                    <li>Wind:</li>
-                    <li>Humidity:</li>
-                </ul>
-        </section>
-        <section class="forecast">
-            <h2>5-Day Forecast:</h2>
-        </section>
-        <section class="five-days"></section>
-    </section>
-    <aside class="float-left">
-        <article class="search">
-            <h3>Search for a City:</h3>
-            <input type="text" name="city-name"/>
-            <button>Search</button>
-        </article>
-        <article>
-            <button class="city-button">one</button>
-            <button class="city-button">two</button>
-            <button class="city-button">three</button>
-            <button class="city-button">four</button>
-            <button class="city-button">five</button>
-            <button class="city-button">six</button>
-            <button class="city-button">seven</button>
-            <button class="city-button">eight</button>
-        </article>
-    </aside>
+    <main class="container p-0 mw-90">
+        <div class="row">
+            <aside class="col-md-3 float-left">
+                <article class="search d-flex row border-bottom border-dark mb-3">
+                    <h3 class="p-0">Search for a City:</h3>
+                    <input type="text" name="city-name" id="input" class="mb-2"/>
+                    <button id="searchButton" class="bg-dark text-light mb-3 ">Search</button>
+                </article>
+                <div id="searchedCities" class="searched-cities">
+                    <div id="searchedCitiesList" class="list-unstyled d-flex row"></div>
+                </div>
+            </aside>
+            <section id='content' class="col-md-8 collapse">
+                <section class="border border-dark p-2">
+                    <div class="d-flex">
+                        <h2 class="m-2"><a id="cityName"></a> <a id="currentDay"></a></h2>
+                        <!-- icons -->
+                        <div class="col" id="iconPlacement">
+                            <div id="firstIcon"></div>
+                            <!-- <img
+                                src="http://openweathermap.org/img/wn/10d@2x.png"
+                                alt="icon"
+                            /> -->
+                        </div>
+                    </div>
+                    <ul id='currentWeather' class="list-unstyled card-body">
+                        <li class="mb-2 card-text">Temp:<a id="temp"></a></li>
+                        <li class="mb-2 card-text">Wind:<a id="wind"></a></li>
+                        <li class="card-text">Humidity:<a id="humidity"></a></li>
+                    </ul>
+                </section>
+                <section class="pt-2">
+                    <h2>5-Day Forecast:</h2>
+                </section>
+
+                <!-- forecast -->
+                <div class="row" id="five-day-forecast">
+                    <div class="card-deck w-100"></div>
+                </div>
+                
+                <!-- <section class="five-days">
+                    <ul class="border border-darker list-unstyled d-flex row">
+                        <li id="dateOne"></li>
+                        <li id="iconOne"></li>
+                        <li id="tempOne">Temp: </li>
+                        <li id="WindOne">Wind: </li>
+                        <li id="humidityOne">Humidity: </li>
+                    </ul>
+                </section> -->
+            </section>
+        </div>
+        
+    </main>
+    
+    <!-- jquery link -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
+
     <script src="./assets/script.js"></script>
 </body>
 
