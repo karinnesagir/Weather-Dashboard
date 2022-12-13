@@ -1,3 +1,21 @@
 #content{
     display:hidden;
 }
+
+.card-block{
+    background-color: rgb(84, 134, 220);
+    padding: 10px;
+}
+
+#searchButton{
+    background-color: rgb(84, 134, 220);
+    border-radius: 5px;
+}
+
+#header{
+    background-color: rgb(40, 65, 109);
+}
+
+button{
+    border-radius: 5px;
+}

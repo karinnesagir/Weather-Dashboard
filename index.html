@@ -10,8 +10,8 @@
     <title>Weather Dashboard</title>
 </head>
 
-<body>
-    <header class="p-3 mb-4 bg-dark text-light d-flex justify-content-center">
+<body class="">
+    <header class="p-3 mb-4 text-light d-flex justify-content-center" id="header">
         <h1>Weather Dashboard</h1>
     </header>
     <main class="container p-0 mw-90">
@@ -20,14 +20,14 @@
                 <article class="search d-flex row border-bottom border-dark mb-3">
                     <h3 class="p-0">Search for a City:</h3>
                     <input type="text" name="city-name" id="input" class="mb-2"/>
-                    <button id="searchButton" class="bg-dark text-light mb-3 ">Search</button>
+                    <button id="searchButton" class="text-light mb-3 ">Search</button>
                 </article>
                 <div id="searchedCities" class="searched-cities">
                     <div id="searchedCitiesList" class="list-unstyled d-flex row"></div>
                 </div>
             </aside>
             <section id='content' class="col-md-8 collapse">
-                <section class="border border-dark p-2">
+                <section class="border border-dark p-2 rounded">
                     <div class="d-flex">
                         <h2 class="m-2"><a id="cityName"></a> <a id="currentDay"></a></h2>
                         <!-- icons -->
@@ -39,7 +39,7 @@
                             /> -->
                         </div>
                     </div>
-                    <ul id='currentWeather' class="list-unstyled card-body">
+                    <ul id='currentWeather' class="list-unstyled card-body mb-0">
                         <li class="mb-2 card-text">Temp:<a id="temp"></a></li>
                         <li class="mb-2 card-text">Wind:<a id="wind"></a></li>
                         <li class="card-text">Humidity:<a id="humidity"></a></li>
@@ -51,7 +51,7 @@
 
                 <!-- forecast -->
                 <div class="row" id="five-day-forecast">
-                    <div class="card-deck w-100"></div>
+                    <div class="card-deck w-100 d-flex column"></div>
                 </div>
                 
                 <!-- <section class="five-days">
