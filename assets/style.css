@@ -2,20 +2,115 @@
     display:hidden;
 }
 
-.card-block{
-    background-color: rgb(84, 134, 220);
-    padding: 10px;
+#searchButton{
+    background-color: rgb(102, 141, 209);
+    border-radius: 5px;
+    opacity: 0.9;
 }
 
-#searchButton{
-    background-color: rgb(84, 134, 220);
+/* Buttons created in js */
+button{
     border-radius: 5px;
+}
+
+/* Background video */
+#video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
 }
 
 #header{
-    background-color: rgb(40, 65, 109);
+    position: fixed;
+    top: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 70%;
+    padding: 20px;
+    height: 15%;
 }
 
-button{
-    border-radius: 5px;
+.content {
+    position: fixed;
+    bottom: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    height: 65%;
+    right: 0px;
+}
+
+#border{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 10px 0px 10px 0px;
+    margin-left: 10px;
+}
+
+/* cards create in js */
+.card-block{
+    width: 100%;
+    border-radius: 8px;
+    opacity: 0.8;
+    background-color: rgb(102, 141, 209);
+    padding: 10px;
+    margin-right: 20px;
+}
+
+h4{
+    margin: 20px 0px 20px 0px;
+    font-size: 25px;
+}
+
+.forecastTitle{
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Searched cities */
+.city-button{
+    background-color: rgb(96, 94, 94);
+    border-radius: 8px;
+    opacity: 0.8;
+    font-weight:500;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: 800;
+    color: white;
+}
+
+/* Header of page */
+.title{
+    font-size: 50px;
+    font-weight:750;
+}
+
+/* City name */
+h3{
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+#input{
+    padding-left: 10px;
+    width: 95%;
+}
+
+@media screen and (max-width: 830px) {
+
+    #header{
+        width:100%;
+    }
+    main {
+        flex-direction: column;
+    }
 }
