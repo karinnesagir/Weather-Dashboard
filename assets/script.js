@@ -68,7 +68,7 @@ function generateCities(){
       var cityTerm = this.textContent;
       var city = cityTerm;
       var APIKey = '9a0abe5df014989833a4517d1984a3f4';
-      var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
+      var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
   
 
       fetch(queryURL)
@@ -91,7 +91,7 @@ function displayWeatherContainer(){
   content.style.display = 'block';
   var city = input.value;
   var APIKey = '9a0abe5df014989833a4517d1984a3f4';
-  var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
+  var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
   console.log(fetch(queryURL));
 
   fetch(queryURL)
@@ -121,7 +121,7 @@ function displayWeather(weatherData, thisCity){
 
   var APIKey = '9a0abe5df014989833a4517d1984a3f4';
   var cityID = weatherData.id;
-  var newUrl = 'http://api.openweathermap.org/data/2.5/forecast?id=' + cityID + '&appid=' + APIKey;
+  var newUrl = 'https://api.openweathermap.org/data/2.5/forecast?id=' + cityID + '&appid=' + APIKey;
   console.log(fetch(newUrl)); 
 
   fetch(newUrl)
