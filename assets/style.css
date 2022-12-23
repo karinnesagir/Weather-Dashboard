@@ -1,3 +1,7 @@
+body {
+    background-image: url('./images/background-image.jpg');
+}
+
 #content{
     display:hidden;
 }
@@ -14,13 +18,13 @@ button{
 }
 
 /* Background video */
-#video {
+/* #video {
     position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%; 
     min-height: 100%;
-}
+} */
 
 #header{
     position: fixed;
@@ -50,7 +54,7 @@ button{
     margin-left: 10px;
 }
 
-/* cards create in js */
+/* Cards create in js */
 .card-block{
     width: 100%;
     border-radius: 8px;
